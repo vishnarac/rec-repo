@@ -5,7 +5,7 @@ metadata:
 spec:
   memorySize: 2GB
   shardCount: 3
-  replication: true
+  replication: false
   persistence: snapshotEvery12Hour
   #databaseSecretName: redb1-password
   evictionPolicy: volatile-lru
