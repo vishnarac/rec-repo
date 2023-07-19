@@ -1,0 +1,14 @@
+apiVersion: "app.redislabs.com/v1"
+kind: "RedisEnterpriseCluster"
+metadata:
+  name: my-rec
+spec:
+  nodes: 3
+  redisEnterpriseNodeResources:
+    limits:
+      cpu: 2000m
+      memory: 16Gi
+    requests:
+      cpu: 100m
+      memory: 1Gi
+

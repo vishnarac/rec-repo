@@ -1,0 +1,16 @@
+apiVersion: app.redislabs.com/v1alpha1
+kind: RedisEnterpriseDatabase
+metadata:
+  name: redb1
+spec:
+  memorySize: 16GB
+  shardCount: 3
+  replication: true
+  persistence: snapshotEvery12Hour
+  databaseSecretName: redb1-password
+  evictionPolicy: volatile-lru
+  tlsMode: enabled
+  dataInternodeEncryption: true
+  databasePort: 6379
+  shardsPlacement: sparse
+  #clientAuthenticationCertificates: [redb1-tls-cert]
